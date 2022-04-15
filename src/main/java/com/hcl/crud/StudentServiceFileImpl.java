@@ -268,9 +268,7 @@ public class StudentServiceFileImpl {
 	}
 
 	private static void averageStudentAge(Set<Student1> studentSet) {
-		double averageage = studentSet.stream()
-				// .filter(v -> v.getType().equals("cars"))
-				.collect(Collectors.averagingDouble(Student1::getAge));
+		double averageage = studentSet.stream().collect(Collectors.averagingDouble(Student1::getAge));
 		System.out.println("Average age is " + averageage);
 	}
 
@@ -301,8 +299,12 @@ public class StudentServiceFileImpl {
 		System.out.println("'search' or 'find'\nDescription: finds existing student on ID\n");
 
 		System.out.println("'showall' \nDescription: Shows all existing students\n");
+		
+		System.out.println("'average' \nDescription: Finds average of age of students\n");
 
 		System.out.println("'q' or 'quit' \nDescription: Saves and exits the application\n");
+		
+		
 
 	}
 
